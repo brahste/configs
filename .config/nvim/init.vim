@@ -18,10 +18,15 @@ Plug 'tpope/vim-commentary'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-Plug 'liuchengxu/space-vim-dark'
+" Plug 'liuchengxu/space-vim-dark'
+Plug 'overcache/NeoSolarized'
 
 Plug 'jistr/vim-nerdtree-tabs'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
 
@@ -31,7 +36,14 @@ set shiftwidth=4
 set autoindent
 set smartindent
 
-colorscheme space-vim-dark
+syntax enable
+set termguicolors
+set background=dark
+colorscheme NeoSolarized 
+
+let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -54,3 +66,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 nmap <F2> :NERDTreeTabsToggle<CR>
+
+" Add macro for reloading init.vim
+nnoremap <leader>sv :source $MYVIMRC<CR>
