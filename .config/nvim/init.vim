@@ -16,6 +16,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'tpope/vim-commentary'
 
+Plug 'mhinz/vim-signify'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Plug 'liuchengxu/space-vim-dark'
