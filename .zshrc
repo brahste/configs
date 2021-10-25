@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/braden/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -85,7 +85,6 @@ plugins=(
 	dnf
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-#	tmux
 )
 
 
@@ -132,11 +131,7 @@ alias ls="colorls"
 
 # export TERM=xterm-256color
 
-alias cfg='/usr/bin/git --git-dir=/home/braden/.cfg/ --work-tree=/home/braden'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Solarized directory colors
-eval `dircolors ~/.dir_colors/dircolors`
-
