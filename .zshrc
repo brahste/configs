@@ -120,12 +120,10 @@ prompt_context() {}
 # Aliases for quick access to configurations
 alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias tmuxconfig="nvim ~/.tmux.conf"
-alias alaconfig="nvim ~/.config/alacritty/alacritty.yml"
 
 # Aliases for programs
 alias vim="nvim"
-
+alias trezor="cd $HOME/Applications/Trezor && ./Trezor-Suite-21.12.2-linux-x86_64.AppImage"
 # Misc aliases
 alias ls="colorls"
 
