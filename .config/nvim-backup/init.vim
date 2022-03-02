@@ -24,14 +24,16 @@ Plug 'tpope/vim-commentary'
 
 " Enables signals for line additions, deletions, changes
 Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
 
 " Vim themes
 " Plug 'overcache/NeoSolarized'
 " Plug 'mhartington/oceanic-next' 
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
-" Enhanced C++ syntax highlighting
+" Fancy syntax highlighting for various languages
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Vim trouble plugin for troubleshooting problems 
 Plug 'kyazdani42/nvim-web-devicons'
@@ -49,6 +51,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Fancy developer icons
+Plug 'ryanoasis/vim-devicons'
+
 " Initialize plugin system
 call plug#end()
 
@@ -57,11 +62,13 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
+set encoding=UTF-8
 
 let g:airline_solarized_bg='dark'
 " let g:airline_theme='oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
 
 " For oceanic-next theme
 if (has("termguicolors"))
@@ -95,7 +102,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <F2> :NERDTreeTabsToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 
 " Add macro for reloading init.vim
 nnoremap <leader>sv :source $MYVIMRC<CR>
