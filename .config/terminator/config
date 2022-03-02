@@ -1,5 +1,6 @@
 [global_config]
-  borderless = True
+  title_transmit_bg_color = "#00285e"
+  title_inactive_bg_color = "#000b29"
   title_font = PowerlineSymbols Medium 9
 [keybindings]
   split_horiz = <Primary>minus
@@ -13,9 +14,24 @@
     cursor_color = "#aaaaaa"
     font = MesloLGS NF 10
     foreground_color = "#839496"
-    show_titlebar = False
     scrollbar_position = hidden
+    scrollback_lines = 5000
     use_system_font = False
+  [[jetbrains darcula]]
+    background_color = "#202020"
+    cursor_color = "#ffffff"
+    foreground_color = "#adadad"
+    palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
+  [[Solarized Darcula]]
+    background_color = "#3d3f41"
+    cursor_color = "#708284"
+    foreground_color = "#d2d8d9"
+    palette = "#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9:#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9"
+  [[Monokai Vivid]]
+    background_color = "#121212"
+    cursor_color = "#fb0007"
+    foreground_color = "#f9f9f9"
+    palette = "#121212:#fa2934:#98e123:#fff30a:#0443ff:#f800f8:#01b6ed:#ffffff:#838383:#f6669d:#b1e05f:#fff26d:#0443ff:#f200f6:#51ceff:#ffffff"
 [layouts]
   [[default]]
     [[[window0]]]
@@ -24,4 +40,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
 [plugins]
