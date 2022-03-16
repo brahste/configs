@@ -7,9 +7,10 @@ require('keybindings')
 
 require('feline').setup()
 require('rust-tools').setup({})
--- set inlay hints
--- require('rust-tools.inlay_hints').set_inlay_hints()
 require('nvim-tree').setup()
+require('lsp-format').setup({})
+require('lspconfig').clangd.setup { on_attach = require "lsp-format".on_attach }
+require('nvim-autopairs').setup({})
 
 local cmp = require"cmp"
 cmp.setup({
@@ -19,6 +20,13 @@ cmp.setup({
     end,
   },
   mapping = {
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, { "i" }),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),

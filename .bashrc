@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source /home/braden/proj/core/ardupilot/Tools/completion/completion.bash
+. "$HOME/.cargo/env"

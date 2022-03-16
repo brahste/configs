@@ -1,9 +1,14 @@
 require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
-  use 'ellisonleao/gruvbox.nvim'   -- Classic gruvbox color theme
+  -- use 'ellisonleao/gruvbox.nvim'   -- Classic gruvbox color theme
+  use {
+    'tjdevries/colorbuddy.vim',    -- Dark one-buddy theme
+    'Th3Whit3Wolf/onebuddy',
+  }
   use 'vimwiki/vimwiki'            -- Add more about the VIM Wiki!
   use 'tpope/vim-commentary'       -- Simple block commenting with `gcc` and `gc`
+  use 'windwp/nvim-autopairs'
   use 'mhinz/vim-signify'          -- Annotates added, removed, and modified lines
   use 'feline-nvim/feline.nvim'    -- Statusline plugin (!needs configuration)
   use {
@@ -38,6 +43,7 @@ require('packer').startup(function()
     'neovim/nvim-lspconfig',             -- Native neovim LSP support
     'williamboman/nvim-lsp-installer',   -- LSP installer (use :LspInstall <lang>)
   }
+  use 'lukas-reineke/lsp-format.nvim'    -- LSP formatter that uses native LSP
   use 'simrat39/rust-tools.nvim'
   use {
     'hrsh7th/cmp-nvim-lsp',              -- Variety of completion plugins

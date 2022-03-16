@@ -76,7 +76,7 @@ alias cdp="cd ~/proj"
 
 # Quick access to dotfiles 
 alias zshconfig="nvim ~/.zshrc"
-alias nvimconfig="nvim ~/.config/nvim/init.vim"
+alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias nvimswaps="cd $HOME/.local/share/nvim/swap"
 
 # Aliases for programs and applications
