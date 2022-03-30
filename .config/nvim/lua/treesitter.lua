@@ -7,7 +7,7 @@ configs.setup({
   ensure_installed = "maintained",
   indent = { enable = true, },
   sync_install = false,  -- Install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "javascript" },  -- List of parsers to ignore installing
+  -- ignore_install = { "javascript" },  -- List of parsers to ignore installing
   highlight = {
     enable = true,  -- `false` will disable the whole extension
     disable = { "php" },  -- list of languages that will be disabled
