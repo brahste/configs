@@ -44,13 +44,6 @@ prompt_context() {}
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -62,10 +55,13 @@ prompt_context() {}
 # Quick access ssh and sftp aliases
 alias sshdx1="ssh root@172.25.143.248"
 alias sshdx1jetson="ssh ava@172.25.248.213"
+alias sshdx1proxy="ssh -fND 9001 root@172.25.143.248"
+alias sftpdx1decimus="sftp -o ProxyCommand='/usr/bin/nc -x 127.0.0.1:9001 %h %p' root@192.168.168.203"
 alias pingdx1="ping 172.25.143.248"
 
 alias sshdx3="ssh root@172.25.212.230"
 alias sshdx3jetson="ssh jeeves@172.25.231.57"
+alias sshdx3proxy="ssh -fND 9003 root@172.25.212.230"
 alias pingdx3="ping 172.25.212.230"
 
 alias sshbed="ssh root@172.25.119.133"
