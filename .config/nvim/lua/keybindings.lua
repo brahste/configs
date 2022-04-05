@@ -64,3 +64,4 @@ keymap('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
 -- Nvim Tree commands
 keymap('n', '<F2>', ':NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)

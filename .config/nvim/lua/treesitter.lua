@@ -1,13 +1,13 @@
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-local configs = require"nvim-treesitter.configs"
+local configs = require('nvim-treesitter.configs')
 configs.setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = "maintained",
   indent = { enable = true, },
   sync_install = false,  -- Install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "javascript" },  -- List of parsers to ignore installing
+  -- ignore_install = { "javascript" },  -- List of parsers to ignore installing
   highlight = {
     enable = true,  -- `false` will disable the whole extension
     disable = { "php" },  -- list of languages that will be disabled

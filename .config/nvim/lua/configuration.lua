@@ -4,5 +4,6 @@ vim.opt.softtabstop = 2
 vim.opt.number = true
 
 vim.opt.termguicolors = true
-vim.o.background = 'dark'
-vim.cmd([[colorscheme gruvbox]])
+require('colorbuddy').colorscheme('onebuddy')
+-- vim.o.background = 'dark'
+-- vim.cmd([[colorscheme gruvbox]])

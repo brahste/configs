@@ -2,6 +2,45 @@
   title_inactive_bg_color = "#000000"
   title_transmit_bg_color = "#0096d7"
 [keybindings]
+  title_transmit_bg_color = "#0076c9"
+  title_receive_bg_color = "#fcaf3e"
+  title_inactive_bg_color = "#000000"
+  suppress_multiple_term_dialog = True
+  title_font = PowerlineSymbols Medium 9
+[keybindings]
+  split_horiz = <Primary>minus
+  split_vert = <Primary>backslash
+  hide_window = <Primary><Shift><Alt>l
+  edit_tab_title = <Primary><Alt>s
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_color = "#282c34"
+    background_darkness = 0.99
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = MesloLGS NF 10
+    foreground_color = "#f3f3f3"
+    scrollbar_position = hidden
+    scrollback_lines = 5000
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+  [[jetbrains darcula]]
+    background_color = "#202020"
+    cursor_color = "#ffffff"
+    foreground_color = "#adadad"
+    palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
+  [[Solarized Darcula]]
+    background_color = "#3d3f41"
+    cursor_color = "#708284"
+    foreground_color = "#d2d8d9"
+    palette = "#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9:#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9"
+  [[Monokai Vivid]]
+    background_color = "#121212"
+    cursor_color = "#fb0007"
+    foreground_color = "#f9f9f9"
+    palette = "#121212:#fa2934:#98e123:#fff30a:#0443ff:#f800f8:#01b6ed:#ffffff:#838383:#f6669d:#b1e05f:#fff26d:#0443ff:#f200f6:#51ceff:#ffffff"
+>>>>>>> 489d97d9ec2811b559078e44289ebe0001776e52
 [layouts]
   [[default]]
     [[[child1]]]
