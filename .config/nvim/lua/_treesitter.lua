@@ -3,8 +3,8 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 local configs = require('nvim-treesitter.configs')
 configs.setup({
-  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  -- One of "all" or a list of languages
+  ensure_installed = "all",
   indent = { enable = true, },
   sync_install = false,  -- Install languages synchronously (only applied to `ensure_installed`)
   -- ignore_install = { "javascript" },  -- List of parsers to ignore installing

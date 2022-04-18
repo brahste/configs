@@ -65,3 +65,14 @@ keymap('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- Nvim Tree commands
 keymap('n', '<F2>', ':NvimTreeToggle<CR>', opts)
 keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
+
+-- lspconfig
+keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+vim.cmd([[
+" UltiSnips settings
+" let g:UltiSnipsExpandTrigger="<C-Tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsListSnippets="<C-l>"
+]])

@@ -20,9 +20,7 @@ require('packer').startup(function()
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function ()
         local alpha = require'alpha'
-        -- require'alpha'.setup(require'alpha.themes.startify'.config)
         local startify = require'alpha.themes.startify'
-        -- startify.section.mru_cwd.val = { { type = "padding", val = 0 } }
         startify.section.bottom_buttons.val = {
           startify.button("e", "new file", ":ene <bar> startinsert <CR>"),
           startify.button("c", "neovim config", ":e ~/.config/nvim/init.lua<CR>"),
@@ -39,18 +37,25 @@ require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',   -- Treesitter? What does it do exactly?
     run = ':TSUpdate',
   }
+  use { 
+    'SirVer/ultisnips',
+    requires =  { 'quangnguyen30192/cmp-nvim-ultisnips' }, { 'honza/vim-snippets' }
+  }
   use {
     'neovim/nvim-lspconfig',             -- Native neovim LSP support
-    'williamboman/nvim-lsp-installer',   -- LSP installer (use :LspInstall <lang>)
+    -- 'williamboman/nvim-lsp-installer',   -- LSP installer (use :LspInstall <lang>)
   }
-  use 'lukas-reineke/lsp-format.nvim'    -- LSP formatter that uses native LSP
+  -- use 'lukas-reineke/lsp-format.nvim'    -- LSP formatter that uses native LSP
+  use 'mhartington/formatter.nvim'
   use 'simrat39/rust-tools.nvim'
   use {
     'hrsh7th/cmp-nvim-lsp',              -- Variety of completion plugins
+    'hrsh7th/cmp-nvim-lua',              -- Variety of completion plugins
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
+    'onsails/lspkind-nvim',
   }
   use {
     'hrsh7th/cmp-vsnip',
