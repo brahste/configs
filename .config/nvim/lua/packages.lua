@@ -5,6 +5,7 @@ require('packer').startup(function()
   use {
     'tjdevries/colorbuddy.vim',    -- Dark one-buddy theme
     'Th3Whit3Wolf/onebuddy',
+    'EdenEast/nightfox.nvim'
   }
   use 'vimwiki/vimwiki'            -- Add more about the VIM Wiki!
   use 'tpope/vim-commentary'       -- Simple block commenting with `gcc` and `gc`

@@ -8,6 +8,7 @@ require('packages')
   require('_rust-tools')
   require('_formatter')
 require('configuration')
+require('colorscheme')
 require('keybindings')
 
 require('feline').setup()

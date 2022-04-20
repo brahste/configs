@@ -40,17 +40,8 @@ source $ZSH/oh-my-zsh.sh
 # Show nothing about user@comp on prompt
 prompt_context() {}
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,6 +82,7 @@ alias trezor="cd $HOME/Applications/Trezor && ./Trezor-Suite-21.12.2-linux-x86_6
 alias pycharm="bash $HOME/Applications/pycharm-community-2021.3.1/bin/pycharm.sh"
 # Misc aliases
 alias ls="colorls"
+alias watch="watch --color"
 
 # Alias for dotfile configuration management with git
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

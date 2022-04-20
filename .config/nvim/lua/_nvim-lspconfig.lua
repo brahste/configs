@@ -1,19 +1,22 @@
 -- All language servers installed at ~/.local/share/nvim/lsp_servers/
 -- and symlinked to ~/.local/bin/
 require'lspconfig'.clangd.setup{capabilities=capabilities}
-require'lspconfig'.rust_analyzer.setup{capabilities=capabilities}
-require'lspconfig'.cmake.setup{capabilities=capabilities}
-require'lspconfig'.dockerls.setup{capabilities=capabilities}
-require'lspconfig'.pyright.setup{
-  capabilities=capabilities,
-  settings = {
-    python = {
-      analysis = {       
-        typeCheckingMode = "off",                                                                                          
-      }
-    }
-  }   
+require'lspconfig'.rust_analyzer.setup{
+  on_attach=on_attach,
+  capabilities=capabilities
 }
+require'lspconfig'.cmake.setup{capabilities=capabilities}
+-- require'lspconfig'.dockerls.setup{capabilities=capabilities}
+-- require'lspconfig'.pyright.setup{
+--   capabilities=capabilities,
+--   settings = {
+--     python = {
+--       analysis = {       
+--         typeCheckingMode = "off",                                                                                          
+--       }
+--     }
+--   }   
+-- }
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
