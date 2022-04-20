@@ -47,6 +47,7 @@ require('packer').startup(function()
   }
   -- use 'lukas-reineke/lsp-format.nvim'    -- LSP formatter that uses native LSP
   use 'mhartington/formatter.nvim'
+  use { 'kdheepak/lazygit.nvim' }
   use 'simrat39/rust-tools.nvim'
   use {
     'hrsh7th/cmp-nvim-lsp',              -- Variety of completion plugins
