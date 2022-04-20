@@ -56,6 +56,7 @@ prompt_context() {}
 alias sshdx1="ssh root@172.25.143.248"
 alias sshdx1jetson="ssh ava@172.25.248.213"
 alias sshdx1proxy="ssh -fND 9001 root@172.25.143.248"
+alias sshdx1decimus="ssh -o ProxyCommand='/usr/bin/nc -x 127.0.0.1:9001 %h %p' root@192.168.168.203"
 alias sftpdx1decimus="sftp -o ProxyCommand='/usr/bin/nc -x 127.0.0.1:9001 %h %p' root@192.168.168.203"
 alias pingdx1="ping 172.25.143.248"
 
