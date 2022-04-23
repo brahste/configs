@@ -23,8 +23,9 @@ cmp.setup({
 
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'ultisnips' },
-    { name = 'vsnip' },
+    -- { name = 'ultisnips' },
+    -- { name = 'vsnip' },
+    { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
   },
@@ -44,7 +45,7 @@ cmp.setup({
 
   snippet = {
     expand = function(args)
-      vim.fn["Ultisnips#Anon"](args.body)
+      require'luasnip'.lsp_expand(args.body)
     end,
   },
 

@@ -1,11 +1,12 @@
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- All language servers installed at ~/.local/share/nvim/lsp_servers/
 -- and symlinked to ~/.local/bin/
-require'lspconfig'.clangd.setup{capabilities=capabilities}
+require'lspconfig'.clangd.setup{on_attach=on_attach, capabilities=capabilities}
 require'lspconfig'.rust_analyzer.setup{
   on_attach=on_attach,
   capabilities=capabilities
 }
-require'lspconfig'.cmake.setup{capabilities=capabilities}
+-- require'lspconfig'.cmake.setup{capabilities=capabilities}
 -- require'lspconfig'.dockerls.setup{capabilities=capabilities}
 -- require'lspconfig'.pyright.setup{
 --   capabilities=capabilities,

@@ -74,5 +74,5 @@ vim.cmd([[
 " let g:UltiSnipsExpandTrigger="<C-Tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsListSnippets="<C-l>"
+" let g:UltiSnipsListSnippets="<C-l>"
 ]])

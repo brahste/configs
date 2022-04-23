@@ -1,17 +1,15 @@
 require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
-  -- use 'ellisonleao/gruvbox.nvim'   -- Classic gruvbox color theme
+  -- Themes
   use {
-    'tjdevries/colorbuddy.vim',    -- Dark one-buddy theme
-    'Th3Whit3Wolf/onebuddy',
     'EdenEast/nightfox.nvim'
   }
   use 'vimwiki/vimwiki'            -- Add more about the VIM Wiki!
   use 'tpope/vim-commentary'       -- Simple block commenting with `gcc` and `gc`
-  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-autopairs'      -- Dynamic braces matching and spacing
   use 'mhinz/vim-signify'          -- Annotates added, removed, and modified lines
-  use 'feline-nvim/feline.nvim'    -- Statusline plugin (!needs configuration)
+  use { 'hoob3rt/lualine.nvim' }   -- Statusline plugin
   use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
@@ -35,18 +33,13 @@ require('packer').startup(function()
 
   -- IDE plugins
   use {
-    'nvim-treesitter/nvim-treesitter',   -- Treesitter? What does it do exactly?
+    'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
   }
-  use { 
-    'SirVer/ultisnips',
-    requires =  { 'quangnguyen30192/cmp-nvim-ultisnips' }, { 'honza/vim-snippets' }
-  }
+  use { 'L3MON4D3/LuaSnip', requires = {'honza/vim-snippets'} }
   use {
     'neovim/nvim-lspconfig',             -- Native neovim LSP support
-    -- 'williamboman/nvim-lsp-installer',   -- LSP installer (use :LspInstall <lang>)
   }
-  -- use 'lukas-reineke/lsp-format.nvim'    -- LSP formatter that uses native LSP
   use 'mhartington/formatter.nvim'
   use { 'kdheepak/lazygit.nvim' }
   use 'simrat39/rust-tools.nvim'
@@ -57,15 +50,19 @@ require('packer').startup(function()
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
+    'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
   }
-  use {
-    'hrsh7th/cmp-vsnip',
-    'hrsh7th/vim-vsnip',
-  }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
+  -- use {
+  --   'hrsh7th/cmp-vsnip',
+  --   'hrsh7th/vim-vsnip',
+  -- }
+  use { 
+    'nvim-telescope/telescope.nvim',    
+    requires = 
+      { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+      { 'nvim-telescope/telescope-project.nvim' },
+      { 'nvim-lua/plenary.nvim' }
   }
   use {
     'kyazdani42/nvim-tree.lua',

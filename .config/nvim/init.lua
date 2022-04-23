@@ -7,9 +7,17 @@ require('packages')
   require('_nvim-autopairs')
   require('_rust-tools')
   require('_formatter')
+  require('_luasnip')
 require('configuration')
 require('colorscheme')
 require('keybindings')
 
-require('feline').setup()
+require('telescope').setup{}
+-- require('telescope').load_extension('fzf')
+-- require('telescope').load_extension('project')
 
+require('lualine').setup{
+    options = {theme = 'codedark'}
+}
+
+require("luasnip.loaders.from_snipmate").lazy_load()
