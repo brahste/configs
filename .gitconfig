@@ -1,0 +1,10 @@
+[alias]
+    graph = log --all --decorate --oneline --graph --color
+    co = checkout
+    s = status
+    b = branch
+[user]
+    email = braden@openoceanrobotics.com\n
+    name = Braden Stefanuk
+[core]
+    editor = nvim
