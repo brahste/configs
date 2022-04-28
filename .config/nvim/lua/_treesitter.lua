@@ -6,7 +6,7 @@ local configs = require('nvim-treesitter.configs')
 configs.setup({
   -- One of "all" or a list of languages
   ensure_installed = "all",
-  indent = { enable = true, },
+  indent = { enable = true, disable = { 'yaml' } },
   sync_install = false,  -- Install languages synchronously (only applied to `ensure_installed`)
   -- ignore_install = { "javascript" },  -- List of parsers to ignore installing
   highlight = {

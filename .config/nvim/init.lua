@@ -17,7 +17,7 @@ require('telescope').setup{}
 -- require('telescope').load_extension('project')
 
 require('lualine').setup{
-    options = {theme = 'codedark'}
+    options = {theme = 'nightfly'}
 }
 
 require("luasnip.loaders.from_snipmate").lazy_load()
