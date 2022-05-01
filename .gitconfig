@@ -1,13 +1,19 @@
 [alias]
         graph = log --all --decorate --oneline --graph --color
         s = status
+        b = branch
         co = checkout
  	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 [user]
 	name = Braden Stefanuk
 	email = bstefanuk@gmail.com
+
+[includeIf "gitdir:~/proj/core/"]
+        path = ~/proj/core/.gitconfig
+
 [push]
         default = simple
 [core]
 	editor = nvim
+

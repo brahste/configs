@@ -1,4 +1,10 @@
 [global_config]
+<<<<<<< HEAD
+=======
+  title_transmit_bg_color = "#608b4e"
+  title_receive_bg_color = "#fcaf3e"
+  title_inactive_bg_color = "#555753"
+>>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6
   title_font = PowerlineSymbols Medium 9
   title_inactive_bg_color = "#000000"
   title_receive_bg_color = "#fcaf3e"
@@ -20,8 +26,14 @@
 [plugins]
 [profiles]
   [[default]]
+<<<<<<< HEAD
     background_color = "#152528"
     background_darkness = 0.98
+=======
+    icon_bell = False
+    background_color = "#192330"
+    background_darkness = 0.99
+>>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = MesloLGS NF 10
@@ -31,6 +43,7 @@
     scrollback_lines = 5000
     scrollbar_position = hidden
     use_system_font = False
+<<<<<<< HEAD
   [[Monokai Vivid]]
     background_color = "#121212"
     cursor_color = "#fb0007"
@@ -46,3 +59,31 @@
     cursor_color = "#ffffff"
     foreground_color = "#adadad"
     palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
+=======
+  [[terra]]
+    background_color = "#152528"
+    background_darkness = 0.98
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = MesloLGS NF 10
+    use_system_font = False
+  [[day]]
+    background_color = "#eaeaea"
+    background_darkness = 0.98
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = MesloLGS NF 10
+    foreground_color = "#657b83"
+    use_system_font = False
+  [[dawn]]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+>>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6
