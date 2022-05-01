@@ -23,8 +23,6 @@ cmp.setup({
 
   sources = {
     { name = 'nvim_lsp' },
-    -- { name = 'ultisnips' },
-    -- { name = 'vsnip' },
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
@@ -38,7 +36,6 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[API]",
         path = "[path]",
-        ultisnips = "[snip]",
       }
     }
   },

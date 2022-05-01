@@ -39,6 +39,7 @@ require('packer').startup(function()
   use { 'L3MON4D3/LuaSnip', requires = {'honza/vim-snippets'} }
   use {
     'neovim/nvim-lspconfig',             -- Native neovim LSP support
+    -- 'jose-elias-alvarez/typescript.nvim'
   }
   use 'mhartington/formatter.nvim'
   use { 'kdheepak/lazygit.nvim' }
