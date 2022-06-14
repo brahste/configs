@@ -1,89 +1,20 @@
 [global_config]
-<<<<<<< HEAD
-=======
-  title_transmit_bg_color = "#608b4e"
-  title_receive_bg_color = "#fcaf3e"
-  title_inactive_bg_color = "#555753"
->>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6
-  title_font = PowerlineSymbols Medium 9
-  title_inactive_bg_color = "#000000"
-  title_receive_bg_color = "#fcaf3e"
-  title_transmit_bg_color = "#608b4e"
 [keybindings]
-  edit_tab_title = <Primary><Alt>s
-  hide_window = <Primary><Shift><Alt>l
-  split_horiz = <Primary>minus
-  split_vert = <Primary>backslash
-[layouts]
-  [[default]]
-    [[[child1]]]
-      parent = window0
-      profile = default
-      type = Terminal
-    [[[window0]]]
-      parent = ""
-      type = Window
-[plugins]
+  split_horiz = <Primary>bar
+  split_vert = <Primary>underscore
 [profiles]
   [[default]]
-<<<<<<< HEAD
     background_color = "#152528"
-    background_darkness = 0.98
-=======
-    icon_bell = False
-    background_color = "#192330"
-    background_darkness = 0.99
->>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6
-    background_type = transparent
     cursor_color = "#aaaaaa"
     font = MesloLGS NF 10
-    foreground_color = "#ebdbb2"
-    icon_bell = False
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    scrollback_lines = 5000
-    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
-<<<<<<< HEAD
-  [[Monokai Vivid]]
-    background_color = "#121212"
-    cursor_color = "#fb0007"
-    foreground_color = "#f9f9f9"
-    palette = "#121212:#fa2934:#98e123:#fff30a:#0443ff:#f800f8:#01b6ed:#ffffff:#838383:#f6669d:#b1e05f:#fff26d:#0443ff:#f200f6:#51ceff:#ffffff"
-  [[Solarized Darcula]]
-    background_color = "#3d3f41"
-    cursor_color = "#708284"
-    foreground_color = "#d2d8d9"
-    palette = "#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9:#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9"
-  [[jetbrains darcula]]
-    background_color = "#202020"
-    cursor_color = "#ffffff"
-    foreground_color = "#adadad"
-    palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
-=======
-  [[terra]]
-    background_color = "#152528"
-    background_darkness = 0.98
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = MesloLGS NF 10
-    use_system_font = False
-  [[day]]
-    background_color = "#eaeaea"
-    background_darkness = 0.98
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = MesloLGS NF 10
-    foreground_color = "#657b83"
-    use_system_font = False
-  [[dawn]]
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
-      profile = default
-      type = Terminal
     [[[window0]]]
-      parent = ""
       type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
 [plugins]
->>>>>>> c0c64cf25875e50c2be1f4c523a20f91edea9bb6

@@ -14,6 +14,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+export LS_COLORS="$(vivid -m 8-bit generate molokai)"
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -79,10 +81,12 @@ alias nvimswaps="cd $HOME/.local/share/nvim/swap"
 # Aliases for programs and applications
 alias python="python3"
 alias vim="nvim"
-alias trezor="cd $HOME/Applications/Trezor && ./Trezor-Suite-21.12.2-linux-x86_64.AppImage"
 alias pycharm="bash $HOME/Applications/pycharm-community-2021.3.1/bin/pycharm.sh"
 # Misc aliases
-alias ls="colorls"
+alias ls="lsd"
+alias ll="lsd -l"
+alias la="lsd -la"
+alias lt="lsd --tree"
 alias watch="watch --color"
 
 # Alias for dotfile configuration management with git
