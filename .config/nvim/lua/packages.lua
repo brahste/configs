@@ -9,7 +9,7 @@ require('packer').startup(function()
   use 'tpope/vim-commentary'       -- Simple block commenting with `gcc` and `gc`
   use 'windwp/nvim-autopairs'      -- Dynamic braces matching and spacing
   use 'mhinz/vim-signify'          -- Annotates added, removed, and modified lines
-  use { 'hoob3rt/lualine.nvim' }   -- Statusline plugin
+  use 'hoob3rt/lualine.nvim'       -- Statusline plugin
   use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
@@ -41,9 +41,16 @@ require('packer').startup(function()
     'neovim/nvim-lspconfig',             -- Native neovim LSP support
     -- 'jose-elias-alvarez/typescript.nvim'
   }
+
   use 'mhartington/formatter.nvim'
-  use { 'kdheepak/lazygit.nvim' }
-  use 'simrat39/rust-tools.nvim'
+  use 'kdheepak/lazygit.nvim'
+
+  -- Tools for Rust -> lua/_rust_tools.lua
+  use {
+    'simrat39/rust-tools.nvim',
+    'rust-lang/rust.vim',
+  }
+
   use {
     'hrsh7th/cmp-nvim-lsp',              -- Variety of completion plugins
     'hrsh7th/cmp-nvim-lua',              -- Variety of completion plugins
@@ -54,10 +61,6 @@ require('packer').startup(function()
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
   }
-  -- use {
-  --   'hrsh7th/cmp-vsnip',
-  --   'hrsh7th/vim-vsnip',
-  -- }
   use { 
     'nvim-telescope/telescope.nvim',    
     requires = 
@@ -70,7 +73,7 @@ require('packer').startup(function()
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
-    config = function() require'nvim-tree'.setup {} end
+    -- config = function() require'nvim-tree'.setup {} end
   }
 end)
 

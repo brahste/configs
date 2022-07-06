@@ -11,6 +11,8 @@
 
 [includeIf "gitdir:~/proj/core/"]
         path = ~/proj/core/.gitconfig
+[includeIf "gitdir:~/dev/"]
+        path = ~/dev/gitconfig
 
 [push]
         default = simple

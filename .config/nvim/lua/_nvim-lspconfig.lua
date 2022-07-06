@@ -1,18 +1,29 @@
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- All language servers installed at ~/.local/share/nvim/lsp_servers/
 -- and symlinked to ~/.local/bin/
-require'lspconfig'.clangd.setup{
+
+local nvim_lsp = require'lspconfig'
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- Enable clangd
+nvim_lsp.clangd.setup{on_attach=on_attach, capabilities=capabilities}
+
+-- Enable rust_analyzer
+nvim_lsp.rust_analyzer.setup({
   on_attach=on_attach,
-  capabilities=capabilities}
-require'lspconfig'.rust_analyzer.setup{
-  on_attach=on_attach,
-  capabilities=capabilities
-}
-require'lspconfig'.tsserver.setup{
-  on_attach=on_attach,
-  capabilities=capabilities
-}
--- require'lspconfig'.cmake.setup{capabilities=capabilities}
+  capabilities=capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = { command = "clippy" },
+    }
+  },
+})
+
+-- Enable cmake-language-server
+nvim_lsp.cmake.setup{on_attach=on_attach, capabilities=capabilities}
+
+-- Enable bash-language-server
+nvim_lsp.bashls.setup{on_attach=on_attach, capabilities=capabilities}
+
 -- require'lspconfig'.dockerls.setup{capabilities=capabilities}
 -- require'lspconfig'.pyright.setup{
 --   capabilities=capabilities,
