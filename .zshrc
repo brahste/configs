@@ -72,6 +72,7 @@ alias pingbed="ping 172.25.119.133"
 
 # Quick directory changes
 alias cdp="cd ~/proj"
+alias cdv="cd ~/dev"
 
 # Quick access to dotfiles 
 alias zshconfig="nvim ~/.zshrc"
@@ -82,6 +83,7 @@ alias nvimswaps="cd $HOME/.local/share/nvim/swap"
 alias python="python3"
 alias vim="nvim"
 alias pycharm="bash $HOME/Applications/pycharm-community-2021.3.1/bin/pycharm.sh"
+#
 # Misc aliases
 alias ls="lsd"
 alias ll="lsd -l"
