@@ -75,8 +75,6 @@ alias pingbed="ping 172.25.119.133"
 alias cdp="cd ~/proj"
 alias cdv="cd ~/dev"
 
-alias cdv="cdv ~/dev"
-
 # Quick access to dotfiles 
 alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
